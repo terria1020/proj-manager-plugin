@@ -9,7 +9,7 @@ Sublime Text 3 + MinGW 개발환경에서 개발 시 bin/ , header/ 폴더를 �
 >> 가 생성되고, mingw-gcc를 실행시킬 빌드 시스템으로부터 실행될 build.bat파일이 만들어집니다.
 
 >> 단축키를 이용하지 않고 사용 시, Ctrl + `를 이용하여 커맨드 창을 여신 뒤,
-#view.run_command('proj_manager')
+view.run_command('proj_manager')
 >> 를 실행해주시면 되겠습니다.
 
 >>> 빌드 내용 중 프로그램 생성 이름(output), mingw 경로, gcc/g++ 이용 여부, 빌드 타겟 수정 등
