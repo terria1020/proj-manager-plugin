@@ -25,4 +25,4 @@ view.run_command('proj_manager')
 
 >> 를 생성하셔서 Sublime Text 3 \ Data \ Packages \ User 에 원하는 빌드 시스템 이름으로 저장해주시면 됩니다.
 
-#made by terria1020 / https://www.terria1020.blogspot.com
+#made by terria1020 / https://terria1020.blogspot.com/
