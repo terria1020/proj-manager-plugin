@@ -41,3 +41,31 @@ class ProjManagerCommand(sublime_plugin.TextCommand):
 		f.write(")\n")
 
 		f.close()
+
+class ClassManagerCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		get_path = self.view.file_name()
+		indextemp = 0
+		t_list = get_path.split('\\')
+		for i in t_list:
+			indextemp = len(i)
+		section_text = t_list[-1].split(".")
+		text_len = len(section_text[-1])
+		hpath = get_path[0:-(indextemp)] + "header\\" + section_text[0] + ".h"
+		print(hpath)
+
+		f = open(hpath, 'w')
+
+		f.write("#pragma once\n\n")
+
+		f.write("class " + section_text[0] + ":\n")
+		f.write("private:\n")
+		f.write("\t\n")
+		f.write("public:\n")
+		f.write("\t" + section_text[0] + "()\n")
+		f.write("\t~" + section_text[0] + "()\n")
+		f.write("};")
+
+		f.close()
+
+		self.view.insert(edit, 0, "#include <" + "header\\" + section_text[0] + ".h>\n")

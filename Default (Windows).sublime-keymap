@@ -1,3 +1,4 @@
 [
-	{ "keys": ["ctrl+f1"], "command": "proj_manager" }
+	{ "keys": ["ctrl+f1"], "command": "proj_manager" },
+	{ "keys": ["ctrl+f3"], "command": "class_manager" }
 ]
