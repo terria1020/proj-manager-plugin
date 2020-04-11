@@ -9,10 +9,10 @@ class ProjManagerCommand(sublime_plugin.TextCommand):
 		#output file name
 		output = "main.exe"	
 		#if use g++, remove comment
-		#build_sys = "g++"
-		build_sys = "gcc"
-		#build_target = "*.cpp"
-		build_target = "*.c"
+		build_sys = "g++.exe"
+		#build_sys = "gcc"
+		build_target = "*.cpp"
+		#build_target = "*.c"
 
 
 		get_path = self.view.file_name()
@@ -32,11 +32,11 @@ class ProjManagerCommand(sublime_plugin.TextCommand):
 		f.write("@echo off\n\n")
 
 		f.write("cd " + mingw + "\n\n")
-		f.write("if exist " + path + "bin\\" + output + "(\n")
+		f.write("if exist " + path + "bin\\" + output + " (\n")
 		f.write("\tdel " + path + "bin\\" + output + "\n")
 		f.write(")\n\n")
 		f.write(build_sys + " -o " + path + "bin\\" + output + " " + path + build_target + "\n\n")
-		f.write("if exist " + path + "bin\\" + output + "(\n")
+		f.write("if exist " + path + "bin\\" + output + " (\n")
 		f.write("\techo build success.\n")
 		f.write(")\n")
 
