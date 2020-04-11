@@ -27,5 +27,6 @@ view.run_command('proj_manager')
 >> 를 생성하셔서 Sublime Text 3 \ Data \ Packages \ User 에 원하는 빌드 시스템 이름으로 저장해주시면 됩니다.
 
 .c나 cpp파일에서 명령어 사용 시 header/소스.h 파일이 작성되는 명령어를 추가하였습니다.
+단축키는 Ctrl+F3 / 명령어는 view.run_command('class_manager')
 
 #made by terria1020 / https://terria1020.blogspot.com/
