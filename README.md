@@ -18,11 +18,11 @@ view.run_command('proj_manager')
 
 > 직접 build.bat를 실행하셔서 빌드하셔도 되고,
 > Tools-Build System-New Build System
-"""
+
 {
 	"shell_cmd": "경로\build.bat"
 }
-"""
+
 
 >> 를 생성하셔서 Sublime Text 3 \ Data \ Packages \ User 에 원하는 빌드 시스템 이름으로 저장해주시면 됩니다.
 
