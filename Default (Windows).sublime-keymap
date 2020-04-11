@@ -1,0 +1,3 @@
+[
+	{ "keys": ["ctrl+f1"], "command": "proj_manager" }
+]
