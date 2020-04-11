@@ -35,7 +35,7 @@ class ProjManagerCommand(sublime_plugin.TextCommand):
 		f.write("if exist " + path + "bin\\" + output + "(\n")
 		f.write("\tdel " + path + "bin\\" + output + "\n")
 		f.write(")\n\n")
-		f.write(build_sys + " -o " + path + "bin\\" + output + " " + path + "\\" + build_target + "\n\n")
+		f.write(build_sys + " -o " + path + "bin\\" + output + " " + path + build_target + "\n\n")
 		f.write("if exist " + path + "bin\\" + output + "(\n")
 		f.write("\techo build success.\n")
 		f.write(")\n")
