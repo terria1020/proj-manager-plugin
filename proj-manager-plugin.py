@@ -58,7 +58,7 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 
 		f.write("#pragma once\n\n")
 
-		f.write("class " + section_text[0] + "{\n")
+		f.write("class " + section_text[0] + " {\n")
 		f.write("private:\n")
 		f.write("\t\n")
 		f.write("public:\n")
@@ -68,4 +68,6 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 
 		f.close()
 
-		self.view.insert(edit, 0, "#include <" + "header\\" + section_text[0] + ".h>\n")
+		self.view.insert(edit, 0, "#include <" + "header\\" + section_text[0] + ".h>\n\n"
+			+ section_text[0] + "::" + section_text[0] + "() {\n\t\n}\n"
+			+ section_text[0] + "::~" + section_text[0] + "() {\n\t\n}\n")
