@@ -58,12 +58,12 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 
 		f.write("#pragma once\n\n")
 
-		f.write("class " + section_text[0] + ":\n")
+		f.write("class " + section_text[0] + "{\n")
 		f.write("private:\n")
 		f.write("\t\n")
 		f.write("public:\n")
-		f.write("\t" + section_text[0] + "()\n")
-		f.write("\t~" + section_text[0] + "()\n")
+		f.write("\t" + section_text[0] + "();\n")
+		f.write("\t~" + section_text[0] + "();\n")
 		f.write("};")
 
 		f.close()
