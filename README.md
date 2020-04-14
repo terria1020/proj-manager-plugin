@@ -30,7 +30,7 @@ view.run_command('proj_manager')
 단축키는 Ctrl+F3 / 명령어는 view.run_command('class_manager')
 
 --
-2020-04-14
+2020-04-14<br>
 새 커맨드를 추가하였습니다.
 mingw를 쉘로 이용하는 build.bat, 그걸 실행하는 빌드 시스템을 이용하여 빌드 시 폴더가 다르면 매 번 빌드시스템을 들어가서 바꿔야 하는 번거로움이 있어, 그 점을 완화하기 위해 커맨드를 추가함.
 
