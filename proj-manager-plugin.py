@@ -5,7 +5,7 @@ import os
 class ProjManagerCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		#MinGW\bin\ path put here
-		mingw = "C:\\Users\\Cyber\\Downloads\\MinGW\\MinGW\\bin"	
+		mingw = "C:\\Users\\Administrator\\Downloads\\MinGW\\MinGW\\bin"	
 		#output file name
 		output = "main.exe"	
 		#if use g++, remove comment
@@ -52,7 +52,6 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 		section_text = t_list[-1].split(".")
 		text_len = len(section_text[-1])
 		hpath = get_path[0:-(indextemp)] + "header\\" + section_text[0] + ".h"
-		print(hpath)
 
 		f = open(hpath, 'w')
 
@@ -71,3 +70,23 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 		self.view.insert(edit, 0, "#include \"" + "header\\" + section_text[0] + ".h\"\n\n"
 			+ section_text[0] + "::" + section_text[0] + "() {\n\t\n}\n"
 			+ section_text[0] + "::~" + section_text[0] + "() {\n\t\n}\n")
+
+class MingwBuildSystemPatchManagerCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		file ="C:\\Users\\Administrator\\Downloads\\Sublime3\\Data\\Packages\\User\\mingw-build.sublime-build"
+		get_path = self.view.file_name()
+		indextemp = 0
+		t_list = get_path.split('\\')
+		for i in t_list:
+			indextemp = len(i)
+		path = get_path[0:-(indextemp)]
+
+		temp = "\t\"shell_cmd\": \"" + path + "build.bat\"\n"
+		maintxt = temp.replace("\\", "\\\\");
+		print(maintxt)
+
+		f = open(file, "w")
+		f.write("{\n")
+		f.write(maintxt)
+		f.write("}")
+		f.close()
