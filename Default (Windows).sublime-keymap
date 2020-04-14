@@ -1,4 +1,5 @@
 [
 	{ "keys": ["ctrl+f1"], "command": "proj_manager" },
-	{ "keys": ["ctrl+f3"], "command": "class_manager" }
+	{ "keys": ["ctrl+f3"], "command": "class_manager" },
+	{ "keys": ["ctrl+f5"], "command": "mingw_build_system_patch_plugin" }
 ]
