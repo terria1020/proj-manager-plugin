@@ -83,7 +83,6 @@ class MingwBuildSystemPatchManagerCommand(sublime_plugin.TextCommand):
 
 		temp = "\t\"shell_cmd\": \"" + path + "build.bat\"\n"
 		maintxt = temp.replace("\\", "\\\\");
-		print(maintxt)
 
 		f = open(file, "w")
 		f.write("{\n")
