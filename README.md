@@ -9,7 +9,9 @@ header/(헤더 파일이 들어가는 폴더)
 가 생성되고, mingw-gcc를 실행시킬 빌드 시스템으로부터 실행될 build.bat파일이 만들어집니다.
 
 단축키를 이용하지 않고 사용 시, Ctrl + `를 이용하여 커맨드 창을 여신 뒤,
-> ```view.run_command('proj_manager')```
+
+> view.run_command('proj_manager')
+
 를 실행해주시면 되겠습니다.
 
 빌드 내용 중 프로그램 생성 이름(output), mingw 경로, gcc/g++ 이용 여부, 빌드 타겟 수정 등
@@ -18,11 +20,11 @@ header/(헤더 파일이 들어가는 폴더)
 
 직접 build.bat를 실행하셔서 빌드하셔도 되고,
 Tools-Build System-New Build System
-```
+
 {
 	"shell_cmd": "경로\build.bat"
 }
-```
+
 
 를 생성하셔서 Sublime Text 3 \ Data \ Packages \ User 에 원하는 빌드 시스템 이름으로 저장해주시면 됩니다.
 
@@ -30,7 +32,8 @@ Tools-Build System-New Build System
 단축키는 Ctrl+F3 / 명령어는 view.run_command('class_manager')
 
 --
-2020-04-14<br>
+2020-04-14
+
 새 커맨드를 추가하였습니다.
 mingw를 쉘로 이용하는 build.bat, 그걸 실행하는 빌드 시스템을 이용하여 빌드 시 폴더가 다르면 매 번 빌드시스템을 들어가서 바꿔야 하는 번거로움이 있어, 그 점을 완화하기 위해 커맨드를 추가함.
 
