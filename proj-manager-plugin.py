@@ -2,19 +2,35 @@ import sublime
 import sublime_plugin
 import os
 
+
+#setting basic path, name
+#if you use other unnormal path, edit self
+
+user_path = "C:\\Users\\"
+username = "Cyber"
+#MinGW\bin\ path put here
+#[edit self]
+mingw_path = user_path + username + "\\Downloads\\MinGW\\MinGW\\bin"
+basic_build_system_path = user_path + username + "\\Downloads\\Sublime3\\Data\\Packages\\User\\mingw-build.sublime-build"
+output_file_name = "main.exe"
+
+
+#if use g++, remove comment
+
+#build_sys = "gcc.exe"
+build_sys = "g++.exe"
+
+
+#build_target setting. other set : build_target = <source>, <source2>, ..
+#[edit self]
+
+build_target = "*.cpp"
+#build_target = "*.c"
+
+
+
 class ProjManagerCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		#MinGW\bin\ path put here
-		mingw = "C:\\Users\\Administrator\\Downloads\\MinGW\\MinGW\\bin"	
-		#output file name
-		output = "main.exe"	
-		#if use g++, remove comment
-		build_sys = "g++.exe"
-		#build_sys = "gcc"
-		build_target = "*.cpp"
-		#build_target = "*.c"
-
-
 		get_path = self.view.file_name()
 		indextemp = 0
 		t_list = get_path.split('\\')
@@ -31,12 +47,13 @@ class ProjManagerCommand(sublime_plugin.TextCommand):
 		f = open(path + "build.bat", 'w')
 		f.write("@echo off\n\n")
 
-		f.write("cd " + mingw + "\n\n")
-		f.write("if exist " + path + "bin\\" + output + " (\n")
-		f.write("\tdel " + path + "bin\\" + output + "\n")
+		f.write("set tgpath=" + path + "\n");
+		f.write("cd " + mingw_path + "\n\n")
+		f.write("if exist %tgpath%bin\\" + output_file_name + " (\n")
+		f.write("\tdel %tgpath%bin\\" + output_file_name + "\n")
 		f.write(")\n\n")
-		f.write(build_sys + " -o " + path + "bin\\" + output + " " + path + build_target + "\n\n")
-		f.write("if exist " + path + "bin\\" + output + " (\n")
+		f.write(build_sys + " -o %tgpath%bin\\" + output_file_name + " %tgpath%" + build_target + "\n\n")
+		f.write("if exist %tgpath%bin\\" + output_file_name + " (\n")
 		f.write("\techo build success.\n")
 		f.write(")\n")
 
@@ -73,7 +90,6 @@ class ClassManagerCommand(sublime_plugin.TextCommand):
 
 class MingwBuildSystemPatchManagerCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		file ="C:\\Users\\Administrator\\Downloads\\Sublime3\\Data\\Packages\\User\\mingw-build.sublime-build"
 		get_path = self.view.file_name()
 		indextemp = 0
 		t_list = get_path.split('\\')
@@ -84,7 +100,7 @@ class MingwBuildSystemPatchManagerCommand(sublime_plugin.TextCommand):
 		temp = "\t\"shell_cmd\": \"" + path + "build.bat\"\n"
 		maintxt = temp.replace("\\", "\\\\");
 
-		f = open(file, "w")
+		f = open(basic_build_system_path, "w")
 		f.write("{\n")
 		f.write(maintxt)
 		f.write("}")
