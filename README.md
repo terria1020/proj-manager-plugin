@@ -48,9 +48,9 @@ view.run_command('mingw_build_system_patch_manager')
 ## 사용 예
 Ctrl + F1 단축키 사용시 :   
 ![image1](https://1.bp.blogspot.com/-6Qym94FMcT0/XsFEVWdheTI/AAAAAAAABDg/UJFXiu_iNEEP32amC0eWTp7nfXHaf5WTwCK4BGAsYHg/s320/1.PNG)  
-Ctrl + F1 단축키 사용시 :   
+Ctrl + F3 단축키 사용시 :   
 ![image2](https://1.bp.blogspot.com/-cXVqEqJqlaM/XsFEw4zUYLI/AAAAAAAABD0/hh5r7PvNXEk7aiH5KNLB4HpoAJ6FQCjoQCK4BGAsYHg/2.png)  
-Ctrl + F1 단축키 사용시 :   
+Ctrl + F5 단축키 사용시 :   
 ![image3](https://1.bp.blogspot.com/-9IPx1kwKjN0/XsFFaYS7JPI/AAAAAAAABEU/4sjIeRr6BZw_65851cLtVxurnnbvfe_xgCK4BGAsYHg/3.png)  
 
 -----------------------
