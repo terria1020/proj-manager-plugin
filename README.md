@@ -17,29 +17,29 @@ Sublime Text 3 + Mingw를 이용한 프로그래밍 연습, 개발 등 C/C++ 개
 ## 단축키
 단축키 파일을 정상적으로 적용 폴더에 넣으면, 다음과 같은 단축키를 사용할 수 있다.
 ```
-	Ctrl + F1 : 현재 보고있는 파일의 위치에 프로젝트 단위 폴더 생성
-	다음과 같은 세 개의 파일·폴더가 생성된다.
-		bin/
-		header/
-		build.bat
+Ctrl + F1 : 현재 보고있는 파일의 위치에 프로젝트 단위 폴더 생성
+다음과 같은 세 개의 파일·폴더가 생성된다.
+	bin/
+	header/
+	build.bat
 
-	Ctrl + F3 : 현재 보고있는 cpp파일의 이름을 가져와 클래스 헤더 파일을 작성한다.
-		헤더파일 작성은 물론 현재 보고있는 cpp파일에도 클래스의 기본 형태가 작성되니,
-		클래스.cpp 파일을 새로 생성 후 바로 단축키를 사용하면 되겠다.
-		Ctrl + F1과 연동하여 사용한다.
+Ctrl + F3 : 현재 보고있는 cpp파일의 이름을 가져와 클래스 헤더 파일을 작성한다.
+	헤더파일 작성은 물론 현재 보고있는 cpp파일에도 클래스의 기본 형태가 작성되니,
+	클래스.cpp 파일을 새로 생성 후 바로 단축키를 사용하면 되겠다.
+	Ctrl + F1과 연동하여 사용한다.
 
-	Ctrl + F5 : 현재 보고 있는 파일의 폴더 위치를 기반으로 서브라임 빌드 시스템 파일을 수정한다.
-		서브라임 빌드 파일은 Ctrl + F1 단축키를 이용하여 생성된 build.bat를 실행하게 하는 것으로,
-		현재 보고있는 파일의 경로를 찾아 빌드 시스템에 경로\build.bat를 작성하는 것이다.
-		Ctrl + F1과 연동하여 사용한다.
+Ctrl + F5 : 현재 보고 있는 파일의 폴더 위치를 기반으로 서브라임 빌드 시스템 파일을 수정한다.
+	서브라임 빌드 파일은 Ctrl + F1 단축키를 이용하여 생성된 build.bat를 실행하게 하는 것으로,
+	현재 보고있는 파일의 경로를 찾아 빌드 시스템에 경로\build.bat를 작성하는 것이다.
+	Ctrl + F1과 연동하여 사용한다.
 ```
 
 만약 단축키를 사용하지 않고 커맨드를 직접 실행하고자 하면
 Ctrl + \`를 이용하여 커맨드 창을 여신 뒤,
 ```python
-	view.run_command('proj-manager')
-	view.run_command('class_manager')
-	view.run_command('mingw_build_system_patch_manager')
+view.run_command('proj-manager')
+view.run_command('class_manager')
+view.run_command('mingw_build_system_patch_manager')
 ```
 필요한 커맨드를 실행시키시면 되겠습니다.
 
